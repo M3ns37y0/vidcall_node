@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body class="text-center" style="margin: 0 auto;">
+    <h4>Welcome App VidCall</h4>
+    <div class="col-md-12 text-center" id="myName">
+      <input type="text" class="form-control" id="usernameInput" placeholder="My name" style="margin: 0 auto;width: 300px;">
+      <input type="button" class="btn btn-success" id="loginBtn" value="Save" style="margin-top: 10px;width: 100px;"></input>
+    </div>
+    <div>
+      <h3><span id="allUsers"></span></h3>
+    </div>
+   
+    <div class="container" id="otherElements">
+      <b><span id="showLocalUserName" style="display: none;"></span></b>
+      <video id="localVideo" autoplay muted style="width:40%;"></video>
+      <b><span id="showRemoteUserName"></span></b>
+      <video id="remoteVideo" autoplay style="width:40%;"></video>
+
+      <br />
+      <div id='callInitiator'>
+          <input id = "callToUsernameInput" class="form-control" type = "text" placeholder = "username to call" style="margin: 0 auto;width: 300px;"/> 
+          <button id = "callBtn" class = "btn-success btn" style="margin-top: 10px;width: 100px;">Call</button> 
+          <!-- <button id = "hangUpBtn" class = "btn-danger btn">Hang Up</button>  -->
+      </div>
+      <div id='callReceiver' style="display: none;">
+        
+        <button id = "answerBtn" class = "btn-success btn">Answer</button> 
+        <button id = "declineBtn" class = "btn-danger btn">Decline</button> 
+    </div>
+    <div id='callOngoing' style="display: none;">
+      
+      <button id = "hangUpBtn" class = "btn-danger btn">Hang Up</button>
+
+  </div>
+      <!-- <input type="button" id="start" onclick="start(true)" value="Start Video"></input>
+      <input type="button" id="Stop" onclick="stop(true)" value="Stop Video"></input> -->
+
+  </div>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="webrtc.js"></script>
+    
+    
+  </body>
+</html>
